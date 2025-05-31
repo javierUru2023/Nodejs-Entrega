@@ -1,9 +1,9 @@
 import { ProductCards } from "../[Components]/ProductCards";
-import { ProductsDB } from "../Data/Products";
+import { ProductsDB } from "../../Api/Products/Data/Products";
 
-export function generateMetadata ({ params, searchParams }, parents) {
+export async function generateMetadata ({ params, searchParams }, parents) {
 
-    const { Category } =   params;
+    const { Category } = await params;
 
   return {
     title: `Productos de ${Category}`,
@@ -12,9 +12,9 @@ export function generateMetadata ({ params, searchParams }, parents) {
     }
 }
 
-export default async function CategoryPage ({ params }) {
+export default function CategoryPage ({ params }) {
 
-    const { Category } =  await params;
+    const { Category } =  params;
 
     const products = Category === "all" ? ProductsDB : ProductsDB.filter((product) => product.category === Category);
 
