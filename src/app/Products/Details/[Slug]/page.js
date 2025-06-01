@@ -1,4 +1,4 @@
-import {ProductsDB} from "../../../Api/Products/Data/Products";
+import {ProductsDB} from "../../../api/Products/Data/Products";
 
 import Link from "next/link";
 

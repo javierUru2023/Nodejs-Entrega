@@ -1,5 +1,5 @@
 import { ProductCards } from "../[Components]/ProductCards";
-import { ProductsDB } from "@/app/Api/Products/Data/Products";
+import { ProductsDB } from "@/app/api/Products/Data/Products";
 
 /*
 export async function generateMetadata({ params }) {
@@ -18,7 +18,7 @@ export default async function CategoryPage({ params }) {
     const { Category } = await params;
 
     try {
-        const res = await fetch("http://192.168.1.5:3000/Api/Products");
+        const res = await fetch("http://192.168.1.5:3000/api/Products");
 
         if (!res.ok) {
             throw new Error(`Error en la API: ${res.status}`);
